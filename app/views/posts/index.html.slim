@@ -11,5 +11,6 @@ hr
 
       .card-body.bg-warning
         h3 = link_to post.title, post
+        small = link_to 'delete post', post, method: :delete, confirm: 'Are you sure?'
 
     br
