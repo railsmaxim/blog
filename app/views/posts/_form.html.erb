@@ -17,9 +17,14 @@
   </div>
 
   <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.file_field :image %><br>
+    <%= f.file_field :imagetwo %><br>
+    <%= f.file_field :imagethree %>
   </div>
+
+  <hr>
+
+  <%= f.trix_editor :description %>
 
   <div class="actions">
     <%= f.submit %>

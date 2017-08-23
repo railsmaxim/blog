@@ -1,0 +1,15 @@
+p#notice = notice
+
+h3.center.fonts Cactus is The Most Beautiful Plant on The Whole Earth
+
+hr
+
+.centerr
+  - @posts.each do |post|
+    .cardd style=('width: 1110px;')
+      = link_to (image_tag post.image.url(:large)), post if post.image?
+
+      .card-body.bg-warning
+        h3 = link_to post.title, post
+
+    br

@@ -1,0 +1,21 @@
+
+li
+  span.badgee.badge-warning = commment.name
+  p = commment.body
+
+  = image_tag commment.proof.url(:mini) if commment.proof?
+
+  p
+    small
+      |  Submitted #{time_ago_in_words(commment.created_at)} ago
+
+  = form_for [commment, Commment.new] do |f|
+    .form-inline
+      = f.text_field :name, placeholder: 'Name', class: 'form-controll namme'
+      = f.text_field :body, placeholder: 'Write Your Reply Here', class: 'form-controll lplp'
+      = f.submit 'Add a Reply'
+
+      = f.file_field :proof
+
+  ul
+    = render partial: 'commments/commment', collection: commment.commments

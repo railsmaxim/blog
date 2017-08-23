@@ -15,7 +15,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'slim'
-gem 'materialize-sass'
+gem 'bootstrap-sass'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'trix'
 
 group :development, :test do
   gem 'byebug', platform: :mri
