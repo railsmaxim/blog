@@ -13,8 +13,8 @@ p#notice = notice
   = image_tag @post.imagethree.url(:large) if @post.imagethree?
 
   .card-footerr
-    p.card-textu
-      p.text-mutedd.fonts Posted 10 minutes ago
+    p.card-text
+      p.text-mutedd.fonts Submitted #{time_ago_in_words(@post.created_at)} ago
 
 br
 
