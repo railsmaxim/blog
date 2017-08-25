@@ -7,7 +7,7 @@ hr
 .centerr
   - @posts.each do |post|
     .cardd style=('width: 1110px;')
-      = link_to (image_tag post.image.url(:large)), post if post.image?
+      = link_to image_tag('main.png', height: 700), post
 
       .card-body.bg-warning
         h3 = link_to post.title, post

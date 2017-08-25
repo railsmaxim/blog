@@ -3,14 +3,19 @@ p#notice = notice
 .cardd.md-3
   .card-body
     h1.card-title.center = @post.title
-  = image_tag @post.image.url(:large) if @post.image?
+
+  = image_tag('main', height: 700)
 
   .card-body
-    p.card-text = @post.description.html_safe
+    p.card-text.margin = @post.description.html_safe
 
-  = image_tag @post.imagetwo.url(:large) if @post.imagetwo?
+  = image_tag('screen1', height: 700)
 
-  = image_tag @post.imagethree.url(:large) if @post.imagethree?
+  .card-body
+    p.card-text.margin
+      | This is My Result in Percentage Down Below
+
+  = image_tag('screen2', height: 700)
 
   .card-footerr
     p.card-text
